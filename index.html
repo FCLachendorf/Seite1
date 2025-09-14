@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Lachendorf</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Overlay -->
+  <div class="nav-overlay" id="navOverlay" hidden></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar" hidden>
+    <div class="sidebar-header">
+      <img src="assets/FCL.svg" alt="FC Lachendorf" class="sidebar-logo">
+    </div>
+    <nav class="sidebar-nav">
+      <a href="./pages/liveticker.html">Live Ticker</a>
+      <a href="./pages/scorer.html">Torschütze</a>
+      <a href="./index.html#motm">Man of the Match</a>
+      <a href="./index.html#geburtstag">Geburtstag</a>
+      <a href="./pages/opponents.html">Gegner Teams</a>
+      <a href="./pages/schedule.html">Spielplan</a>
+    </nav>
+  </aside>
+
+  <!-- HEADER (wie bei Live Ticker, nur ohne Zurück-Button) -->
+  <header class="site-header site-header--home">
+    <!-- Platzhalter links für symmetrisches Grid -->
+    <span class="hdr-spacer" aria-hidden="true"></span>
+
+    <!-- Logo zentriert -->
+    <img src="assets/FCL.svg" alt="FC Lachendorf" class="logo">
+
+    <!-- Burger rechts -->
+    <button class="menu-btn" id="menuBtn" aria-label="Menü öffnen">
+      <img src="assets/navbar.svg" alt="Menü">
+    </button>
+  </header>
+
+
+  <!-- Dunkelroter Strich -->
+  <div class="header-line"></div>
+
+  <!-- Button Grid -->
+  <section class="button-grid">
+    <button class="custom-btn" id="btn-liveticker">Live<br>Ticker</button>
+    <button class="custom-btn" id="btn-torschuetze">Torschütze</button>
+    <button class="custom-btn">Man of the<br>Match</button>
+    <button class="custom-btn">Geburtstag</button>
+    <button class="custom-btn" id="btn-gegner">Gegner<br>Teams</button>
+    <button class="custom-btn" id="btn-spielplan" type="button">Spielplan</button>
+  </section>
+
+  <!-- Rote Datum/Uhrzeit-Leiste -->
+  <section class="dtbar" aria-live="polite" aria-atomic="true">
+    <div class="dtbar-inner">
+      <div id="dtbar-date" class="dtbar-date">TT.MM.JJJJ</div>
+      <div id="dtbar-time" class="dtbar-time">HH:MM UHR</div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 1985 FC Lachendorf · <a href="https://fclachendorf.de/" target="_blank">fclachendorf.de</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
